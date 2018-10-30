@@ -3,8 +3,8 @@ require 'wayback_machine_downloader'
 gem 'wayback_machine_downloader', '~> 2.2.1'
 
 class DownloadFiles
-  def initialize(path = './sites.txt')
-    @file = path
+  def initialize(path)
+    @file = path ||= __dir__ + '/sites.txt'
     @path = `bundle show wayback_machine_downloader --paths`.chomp
     @path += '/bin/wayback_machine_downloader'
   end
