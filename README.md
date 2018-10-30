@@ -2,7 +2,7 @@ Bundle install
 
 Add site urls to sites.txt, one url per line:
 
-https://www.google.com
+https://www.google.com  
 https://www.nike.com
 
 
