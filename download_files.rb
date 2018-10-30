@@ -16,6 +16,8 @@ class DownloadFiles
       puts "Dowloading files for #{url}"
       `ruby #{@path} #{url}`
     end
+  rescue Errno::ENOENT
+    puts "ERROR:\nNo file has been supplied, or the file is not at the path specified\nCall this script with a valid file as the first argument."
   end
 end
 
